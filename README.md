@@ -17,7 +17,6 @@ With this script. Unlike previously, this time I decided to output XML so people
 Unfortunately, Pirate Bay admins always started blocking my computers (I guess they thought I am a evil attacker or something), so I had to switch from computer to computer. And because I wanted to make sure I really didn't miss any torrent, the whole thing took about half a year.
 
 Also, PirateBay had some downtimes during the download. I tried to "catch" them, but I still lost about 100-300 torrents. I am too lazy to sort them out now. Sorry.
-Analyzing for fun
 So, you can run this script with:
        perl  piratebay.pl
 To correct the archive, run the script in Bash on any GNU/Linux distro like follows.
