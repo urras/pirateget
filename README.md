@@ -18,6 +18,7 @@ Unfortunately, Pirate Bay admins always started blocking my computers (I guess t
 
 Also, PirateBay had some downtimes during the download. I tried to "catch" them, but I still lost about 100-300 torrents. I am too lazy to sort them out now. Sorry.
 So, you can run this script with:
+       
        perl  piratebay.pl
 To correct the archive, run the script in Bash on any GNU/Linux distro like follows.
 
