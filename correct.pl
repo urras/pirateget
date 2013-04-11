@@ -25,5 +25,5 @@ echo "</archive>" ) |
     }; 
     s/AAAmp/&amp/g\' | 
         sed \'s/[[:cntrl:]]//g\' > '.$to;
-        #I also want to escape all control chars
+        #I also want to escape all control characters
 
