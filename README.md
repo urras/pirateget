@@ -1,3 +1,5 @@
+PB archive scripts 
+=====================
 Some people noticed that the XML files are not well-formed and valid. I am sorry for that, but I made perl scripts that will make them both, see https://github.com/fr0stycl34r/pirateget/blob/master/correct.pl. The script need perl, bash and sed, so you will need GNU/Linux (OS X will maybe be sufficient but I have nowhere to try).
 Pirate Bay archival
 
@@ -17,13 +19,12 @@ Unfortunately, Pirate Bay admins always started blocking my computers (I guess t
 Also, PirateBay had some downtimes during the download. I tried to "catch" them, but I still lost about 100-300 torrents. I am too lazy to sort them out now. Sorry.
 Analyzing for fun
 So, you can run this script with:
-perl  piratebay.pl
+       perl  piratebay.pl
 To correct the archive, run the script in Bash on any GNU/Linux distro like follows.
 
-   perl correct.pl poor poor3.xml poor.corrected.xml
+       perl correct.pl poor poor3.xml poor.corrected.xml
 
-   perl correct.pl rich rich.xml rich.corrected.xml
-
+       perl correct.pl rich rich.xml rich.corrected.xml
 It will make another file with corrected ampersands and added DOCTYPE and DTD definitons.
 
 The scripts will probably work on OS X too, and maybe even cygwin.
