@@ -9,12 +9,12 @@ use 5.010;
 
 use Fcntl qw(:flock SEEK_END);
 
-#how many times to try if the page does not exists
-#more times than one makes it REALLY slow because most of the TPB pages are actually empty
-#but I wanted to be sure I didn't miss one, because previously, I did
+#How many times to try if the page does not exists
+#More times than one makes it REALLY slow because most of the TPB pages are actually empty
+#But I wanted to be sure I didn't miss one, because previously, I did
 my $tries_if_wrong=4;
 
-#which is the first torrent to try.
+#Which is the first torrent to try.
 my $first = 5706071 ;
 
 sub ent {
@@ -114,7 +114,7 @@ while (1) {
     $i++;
     #$pm->start and next;
 	my $done = 0;
-	#will try each 3 times
+	#Will try each 3 times
 	my $tries = 0;
 	while (!$done){
 	
