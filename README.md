@@ -1,5 +1,7 @@
 PB archive scripts 
 =====================
+Note: All credit goes to http://runn1ng.github.io/
+
 Some people noticed that the XML files are not well-formed and valid. I am sorry for that, but I made perl scripts that will make them both, see https://github.com/fr0stycl34r/pirateget/blob/master/correct.pl. The script need perl, bash and sed, so you will need GNU/Linux (OS X will maybe be sufficient but I have nowhere to try).
 Pirate Bay archival
 
