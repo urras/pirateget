@@ -28,4 +28,4 @@ To correct the archive, run the script in Bash on any GNU/Linux distro like foll
 It will make another file with corrected ampersands and added DOCTYPE and DTD definitons.
 
 The scripts will probably work on OS X too, and maybe even cygwin.
-(I did in fact copy this from  runn1ng.github.com. If I did something wrong, please tell me. I did this readme in a hurry, so it might look a bit retarded).
+(I did in fact copy this from  runn1ng.github.com. If I did something wrong, please tell me. I did this readme in a hurry, so it might look a bit messy).
