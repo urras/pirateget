@@ -24,9 +24,9 @@ So, you can run this script with:
        perl  piratebay.pl
 To correct the archive, run the script in Bash on any GNU/Linux distro like follows.
 
-       perl correct.pl poor poor3.xml poor.corrected.xml
+       perl correct.pl poor outf_poor.xml poor.corrected.xml
 
-       perl correct.pl rich rich.xml rich.corrected.xml
+       perl correct.pl rich outf_rich.xml rich.corrected.xml
 It will make another file with corrected ampersands and added DOCTYPE and DTD definitons.
 
 The scripts will probably work on OS X too, and maybe even cygwin.
