@@ -3,7 +3,9 @@ PB archive scripts
 Note: All credit goes to http://runn1ng.github.io/
 
 Some people noticed that the XML files are not well-formed and valid. I am sorry for that, but I made perl scripts that will make them both, see https://github.com/fr0stycl34r/pirateget/blob/master/correct.pl. The script need perl, bash and sed, so you will need GNU/Linux (OS X will maybe be sufficient but I have nowhere to try).
+
 Pirate Bay archival
+=====================
 
 Some time ago, I did an experiment on how small I can make all pirate bay while keeping the important information. People apparently liked it.
 
@@ -12,7 +14,9 @@ Well, now some months later, I wanted to do two things - first, make it even sma
 So I did both.
 
 Note: since the downloading itself took quite long, the data in the older torrents can be slightly out of date.
-How I did it:
+
+How I did it
+=====================
 
 With this script. Unlike previously, this time I decided to output XML so people parsing it won't get so crazy.
 
