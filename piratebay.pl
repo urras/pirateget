@@ -59,8 +59,8 @@ sub try_once {
 		$richXML .= $poorXML;
 		$richXML.= "\n<size>$size</size>\n<seeders>$seeders</seeders>\n<leechers>$leechers</leechers>\n";
 		
-		#this stopped working
-		#my ($up, $down) = $page =~ /<dd id="rating" class="">\s*\+(\d+) \/ -(\d+)/;
+		#This stopped working
+		#My ($up, $down) = $page =~ /<dd id="rating" class="">\s*\+(\d+) \/ -(\d+)/;
 		#$richXML.= "<quality><up>$up</up><down>$down</down></quality>\n";
 		
 		
@@ -74,14 +74,14 @@ sub try_once {
 		
 		$richXML.="<comments>\n";
 		
-		#really hacky stuff with pages
+		#Really hacky stuff with pages
 		my ($compages) = $page =~ /<strong>(\d*)<\/strong>/;
 		if (!$compages) {$compages = 1}
 		
 		for my $compagenu (1..$compages) {
 			my $comurl = 'http://thepiratebay.se/ajax_details_comments.php?id='.$i.'&page='.$compagenu.'&pages=2000';
 			my $comhtml = "";
-			#say "curl -s '$comurl' -m 120";
+			#Say "curl -s '$comurl' -m 120";
 			
 			$comhtml = `curl -s '$comurl' -m 120` 
 		        while ($comhtml !~ /<div/);
