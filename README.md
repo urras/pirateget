@@ -1,8 +1,6 @@
 PB archive scripts 
 =====================
-This is a fork of Karel Bílek's scripts at http://runn1ng.github.io/
-=====================
-Some people noticed that the XML files are not well-formed and valid. I am sorry for that, but I made perl scripts that will make them both, see https://github.com/fr0stycl34r/pirateget/blob/master/correct.pl. The script need Perl, Bash and Sed, so you will need GNU/Linux (OS X may be sufficient but I have nowhere to try).
+This is an upt-to-date fork of Karel Bílek's scripts at http://runn1ng.github.io/
 
 Pirate Bay archival
 =====================
@@ -19,6 +17,8 @@ How I did it
 =====================
 
 With this script! Unlike previously, this time I decided to output XML so people parsing it won't get so crazy.
+
+Some people noticed that the XML files are not well-formed and valid. I am sorry for that, but I made perl scripts that will make them both, see https://github.com/fr0stycl34r/pirateget/blob/master/correct.pl. The script need Perl, Bash and Sed, so you will need GNU/Linux (OS X may be sufficient but I have nowhere to try).
 
 Unfortunately, Pirate Bay admins always started blocking my computers (I guess they thought I am a evil attacker or something), so I had to switch from computer to computer. And because I wanted to make sure I really didn't miss any torrent, the whole thing took about half a year.
 
