@@ -1,6 +1,6 @@
 PB archive scripts 
 =====================
-This is an upt-to-date fork of Karel Bílek's scripts at http://runn1ng.github.io/
+This is an up-to-date fork of Karel Bílek's scripts at http://runn1ng.github.io/
 
 Pirate Bay archival
 =====================
