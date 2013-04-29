@@ -35,3 +35,6 @@ To correct the archive, run the script in Bash on any GNU/Linux distro like foll
 It will make another file with corrected ampersands and added DOCTYPE and DTD definitons.
 
 The scripts will probably work on OS X too, and maybe even Cygwin.
+
+Also, please send Karel Bílek Bitcoins for doing this (he worked really hard on it) at 1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT.
+You can contact him at kb@karelbilek.com
