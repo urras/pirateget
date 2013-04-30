@@ -31,7 +31,7 @@
         <hr>
 
         <section id="main_content">
-          <h1>ThePirateBay archive scripts</h1>
+          <h1>PB archive scripts</h1>
 
 <p>This is an up-to-date fork of Karel Bílek's scripts at <a href="http://runn1ng.github.io/">http://runn1ng.github.io/</a></p>
 
@@ -43,12 +43,39 @@
 
 <p>So I did both.</p>
 
-<p>The "smaller" file is for download here - it has 76 MB 7zipped and it really has just names and magnet links.</p>
+<p>The "smaller" file is for download <a href="http://thepiratebay.se/torrent/8156416">here</a> - it has 76 MB 7zipped and it really has just names and magnet links.</p>
 
-<p>The "bigger" file is for download here - in 631 MB 7zipped, it has all the information about number of seeders, leechers (at the time of the download), magnet links, descriptions, size, and perhaps most importantly - comments. It does not contain the "big" torrent files. But apart from that, you can really reconstruct the whole Pirate Bay from it. (I will touch this later though.)</p>
+<p>The "bigger" file is for download <a href="http://thepiratebay.se/torrent/8163015">here</a> - in 631 MB 7zipped, it has all the information about number of seeders, leechers (at the time of the download), magnet links, descriptions, size, and perhaps most importantly - <b>comments</b>. It does <i>not</i> contain the "big" torrent files. But apart from that, you can really reconstruct the whole Pirate Bay from it. (I will touch this later though.)</p>
 
-<p>Note: since the downloading itself took quite long, the data in the older torrents can be slightly out of date.
-How I did it</p>
+<p>Note: since the downloading itself took quite long, the data in the older torrents can be slightly out of date.</p>
+
+<h1>How I did it</h1>
+
+<p>With this script! Unlike previously, this time I decided to output XML so people parsing it won't get so crazy.</p>
+
+<p>Some people noticed that the XML files are not well-formed and valid. I am sorry for that, but Karel made perl scripts that will fix them both, see <a href="https://github.com/fr0stycl34r/pirateget/blob/master/correct.pl">https://github.com/fr0stycl34r/pirateget/blob/master/correct.pl</a>. The script needs Perl, Bash and Sed, so you will need GNU/Linux (OS X may be sufficient but I have nowhere to try).</p>
+
+<p>Unfortunately, Pirate Bay admins always started blocking my computers (I guess they thought I am a evil attacker or something), so I had to switch from computer to computer. And because I wanted to make sure I really didn't miss any torrent, the whole thing took about half a year.</p>
+
+<p>Also, ThePirateBay had some downtimes during the download. I tried to "catch" them, but I still lost about 100-300 torrents. I am too lazy to sort them out now. Sorry.</p>
+
+<p>Anyway, you can run this script with:</p>
+
+<pre><code>perl  piratebay.pl
+</code></pre>
+
+<p>To correct the archive, run the script in Bash on any GNU/Linux distro like follows:</p>
+
+<pre><code>perl correct.pl poor outf_poor.xml poor.corrected.xml
+
+perl correct.pl rich outf_rich.xml rich.corrected.xml
+</code></pre>
+
+<p>It will make another file with corrected ampersands and added DOCTYPE and DTD definitons.</p>
+
+<p>The scripts will probably work on OS X too, and maybe even Cygwin.</p>
+
+<p>These scripts were made by Karel Bílek. If you want to contact him, send him an email <a href="mailto:atkb@karelbilek.com">atkb@karelbilek.com</a> . Also, please send him bitcoins to 1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT if you want.</p>
         </section>
 
         <footer>
