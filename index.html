@@ -1,120 +1,63 @@
-ThePirateBay archive scripts
-=
-This is an up-to-date fork of Karel Bílek's scripts at http://runn1ng.github.io/
-Pirate Bay archival
-=
-Some time ago, I did an experiment on how small I can make ThePirateBay while keeping the important information. People apparently liked it.
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Pirateget by fr0stycl34r</title>
+  </head>
 
-Well, now some months later, I wanted to do two things - first, make it even smaller and correct all the mistakes I did before. Second - I wanted to create another version that will have all the additional information - most importantly, all the comments and text information. For me, pirate bay is not just the torrents, but mainly the additional information - "How fake is the file; what can I expect to find inside?"
+  <body>
+    <div id="container">
+      <div class="inner">
 
-So I did both.
+        <header>
+          <h1>Pirateget</h1>
+          <h2></h2>
+        </header>
 
-The "smaller" file is for download here - it has 76 MB 7zipped and it really has just names and magnet links.
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/fr0stycl34r/pirateget/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/fr0stycl34r/pirateget/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/fr0stycl34r/pirateget" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
-The "bigger" file is for download here - in 631 MB 7zipped, it has all the information about number of seeders, leechers (at the time of the download), magnet links, descriptions, size, and perhaps most importantly - comments. It does not contain the "big" torrent files. But apart from that, you can really reconstruct the whole Pirate Bay from it. (I will touch this later though.)
+        <hr>
 
-Note: since the downloading itself took quite long, the data in the older torrents can be slightly out of date.
-How I did it
-=
-With this script! Unlike previously, this time I decided to output XML so people parsing it won't get so crazy.
+        <section id="main_content">
+          <h1>ThePirateBay archive scripts</h1>
 
-Some people noticed that the XML files are not well-formed and valid. I am sorry for that, but Karel made perl scripts that will fix them both, see https://github.com/fr0stycl34r/pirateget/blob/master/correct.pl. The script needs Perl, Bash and Sed, so you will need GNU/Linux (OS X may be sufficient but I have nowhere to try).
+<p>This is an up-to-date fork of Karel Bílek's scripts at <a href="http://runn1ng.github.io/">http://runn1ng.github.io/</a></p>
 
-Unfortunately, Pirate Bay admins always started blocking my computers (I guess they thought I am a evil attacker or something), so I had to switch from computer to computer. And because I wanted to make sure I really didn't miss any torrent, the whole thing took about half a year.
+<h1>Pirate Bay archival</h1>
 
-Also, ThePirateBay had some downtimes during the download. I tried to "catch" them, but I still lost about 100-300 torrents. I am too lazy to sort them out now. Sorry.
+<p>Some time ago, I did an experiment on how small I can make ThePirateBay while keeping the important information. People apparently liked it.</p>
 
-Anyway, you can run this script with:
+<p>Well, now some months later, I wanted to do two things - first, make it even smaller and correct all the mistakes I did before. Second - I wanted to create another version that will have all the additional information - most importantly, all the comments and text information. For me, pirate bay is not just the torrents, but mainly the additional information - "How fake is the file; what can I expect to find inside?"</p>
 
-   perl  piratebay.pl
+<p>So I did both.</p>
 
-To correct the archive, run the script in Bash on any GNU/Linux distro like follows:
+<p>The "smaller" file is for download here - it has 76 MB 7zipped and it really has just names and magnet links.</p>
 
-   perl correct.pl poor outf_poor.xml poor.corrected.xml
+<p>The "bigger" file is for download here - in 631 MB 7zipped, it has all the information about number of seeders, leechers (at the time of the download), magnet links, descriptions, size, and perhaps most importantly - comments. It does not contain the "big" torrent files. But apart from that, you can really reconstruct the whole Pirate Bay from it. (I will touch this later though.)</p>
 
-   perl correct.pl rich outf_rich.xml rich.corrected.xml
+<p>Note: since the downloading itself took quite long, the data in the older torrents can be slightly out of date.
+How I did it</p>
+        </section>
 
-It will make another file with corrected ampersands and added DOCTYPE and DTD definitons.
+        <footer>
+          Pirateget is maintained by <a href="https://github.com/fr0stycl34r">fr0stycl34r</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
 
-The scripts will probably work on OS X too, and maybe even Cygwin.
-Analyzing for fun
-=
-Frankly, I can't wait to see what will people do with this stuff. And I like graphs, so I made some :)
-Uploaded torrents
-
-First, let's look at the most basic thing - how many torrents people upload a day? Is it growing or staying about the same? Let's put the days on X axis and number of torrents on Y axis.
-
-Well, as we can see, the number is growing, even when it's not as smooth as it could be. We can see some drops to zero, I guess it's the days when Pirate Bay was off.
-
-Let's look at the cumulative functions - how much is the number of torrents growing over time?
-
-It's growing nicely. But despite what Pirate Bay says in its footer, I found only about 2 millions of torrents.
-Number of seeders
-
-Now, let's look at something else - is it true, that the newest torrents are seeded the most, or not? Let's put all the torrents on X axis, sort them by time, and put the number of seeders on Y axis. Once R finally crunches the numbers, we get this graph.
-
-We can see that except for some insanely popular torrents in the past, the more recent torrents are indeed the more seeded ones. However, when I tried to look at the seeder numbers closely, I realized one thing.
-
-Slightly more than one third of the torrents have no seeders at all. Nothing.
-
-Actually, more than 3/4 of the torrents have 4 seeders or less.
-
-On the other hands, couple of torrents are insanely popular.
-
-Of course, we can try to visualize this. If you try to graph the popularity on a linear scale and without cutting the very few outliers on the right, you get crazy graph like this. (On X is number of seeders, on Y number of torrents with that number of seeders.)
-
-Yeah, this is not going to work. Let's cut the outliers on the right (say, torrents with >2000 seeders) and let's put the y axis on logarithmic scale.
-
-Keep in mind that Y axis is on logarithmical scale. This is pretty crazy.
-
-What's to take from this? Torrents on TPB are really, really unevenly seeded. Unfortunately, with no seeders, magnet links are useless. So, for about 1/3 of this archive, the magnet links are not really useful, and for 3/4, they are useful only if you are very lucky. OTOH, the torrents files would make this archive much more giant.
-Words
-
-Last but not the least, you can do fun stuff with the descriptions and comments themselves. Unluckily, I currently have no time to play with it, so I just looked at the names of the torrents, did some primitive tokenization and looked at the most favourite words in the torrent names. Well, the results speak for themselves :)
-Order   Appearances 	Word
-1 	184015 	XviD
-2 	177920 	The
-3 	137824 	HDTV
-4 	86804 	x264
-5 	74855 	DVDRip
-6 	65450 	720p
-7 	48845 	XXX
-8 	39148 	2011
-9 	34117 	2012
-10 	32547 	2010
-11 	31453 	avi
-12 	28516 	PDTV
-13 	27057 	VA
-14 	24888 	2009
-15 	24527 	com
-16 	22558 	AC3
-17 	22072 	A
-18 	21019 	2
-19 	19167 	WS
-20 	18563 	2008
-21 	18065 	1
-22 	17836 	480p
-23 	16610 	SWESUB
-24 	16140 	12
-25 	16123 	of
-26 	14861 	the
-27 	14300 	Of
-28 	13706 	Big
-29 	12662 	and
-30 	12592 	BluRay
-31 	12563 	DVDRiP
-32 	12421 	mSD
-33 	12233 	3
-34 	12019 	s
-35 	11701 	XViD
-36 	11532 	2007
-37 	10978 	I
-38 	10898 	2HD
-39 	10556 	LOL
-40 	10504 	10
-
-Well there you have it. All I have been able to squeeze from the archive for now, but I think more people will have more ideas. The links are on the top.
-
-These scripts were made by Karel Bílek. If you want to contact him, send him an email atkb@karelbilek.com . Also, please send him bitcoins to 1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT if you want.
-Pirateget is maintained by fr0stycl34r
-This page was generated by GitHub Pages. Tactile theme by Jason Long.
+        
+      </div>
+    </div>
+  </body>
+</html>
