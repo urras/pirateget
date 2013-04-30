@@ -1,0 +1,5 @@
+<!ELEMENT archive (torrent*)>
+<!ELEMENT torrent (id, title, magnet)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT magnet (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
