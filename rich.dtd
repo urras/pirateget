@@ -1,0 +1,17 @@
+<!ELEMENT archive (torrent*)>
+<!ELEMENT torrent (id, title, magnet, size, seeders, leechers, quality?, uploaded, nfo, comments)>
+<!ELEMENT quality (up,down)>
+<!ELEMENT comments (comment*)>
+<!ELEMENT comment (when,what)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT magnet (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT size (#PCDATA)>
+<!ELEMENT seeders (#PCDATA)>
+<!ELEMENT leechers (#PCDATA)>
+<!ELEMENT uploaded (#PCDATA)>
+<!ELEMENT nfo (#PCDATA)>
+<!ELEMENT when (#PCDATA)>
+<!ELEMENT what (#PCDATA)>
+<!ELEMENT up (#PCDATA)>
+<!ELEMENT down (#PCDATA)>
