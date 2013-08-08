@@ -22,13 +22,13 @@ Also, ThePirateBay had some downtimes during the download. I tried to "catch" th
 
 Anyway, you can run this script with:
 
-    perl  piratebay.pl
+    perl piratebay.pl
 
 To correct the archive, run the script in Bash on any GNU/Linux distro like follows:
 
-    perl correct.pl poor outf_poor.xml poor.corrected.xml
+    perl correct.pl poor outf_poor.xml outf_poor.corrected.xml
 
-    perl correct.pl rich outf_rich.xml rich.corrected.xml
+    perl correct.pl rich outf_rich.xml outf_rich.corrected.xml
 
 It will make another file with corrected ampersands and added DOCTYPE and DTD definitons.
 
