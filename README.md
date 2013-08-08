@@ -39,6 +39,3 @@ Analyzing for fun
 Well there you have it. All I have been able to squeeze from the archive for now, but I think more people will have more ideas. The links are on the top.
 
 These scripts were made by Karel Bílek. If you want to contact him, send him an email atkb@karelbilek.com . Also, please send him bitcoins to 1CrwjoKxvdbAnPcGzYjpvZ4no4S71neKXT if you want.
-
-Pirateget is maintained by fr0stycl34r
-Tactile theme by Jason Long. 
