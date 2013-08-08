@@ -3,7 +3,7 @@ $from = $ARGV[1];
 $to = $ARGV[2];
 
 if ($richpoor ne "rich" && $richpoor ne "poor") {
-    die "first argument must be  either 'rich' or 'poor'";
+    die "First argument must be  either 'rich' or 'poor'";
 }
 
 
