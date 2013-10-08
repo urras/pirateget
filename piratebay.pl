@@ -9,13 +9,13 @@ use 5.010;
 
 use Fcntl qw(:flock SEEK_END);
 
-#How many times to try if the page does not exists
-#More times than one makes it REALLY slow because most of the TPB pages are actually empty
-#But I wanted to be sure I didn't miss one, because previously, I did
+#how many times to try if the page does not exists
+#more times than one makes it REALLY slow because most of the TPB pages are actually empty
+#but I wanted to be sure I didn't miss one, because previously, I did
 my $tries_if_wrong=4;
 
-#Which is the first torrent to try.
-my $first = 5706071 ;
+#which is the first torrent to try.
+my $first = 3211593 ;
 
 sub ent {
   my $w = shift;
@@ -30,7 +30,7 @@ sub try_once {
 
     say "pred curl";
 
-    $page = `curl -s --sslv3 https://thepiratebay.sx/torrent/$i -m 120` 
+    $page = `curl -s http://thepiratebay.se/torrent/$i -m 120` 
         while ($page !~ /<!DOCTYPE html/);
 
     say "po curl";
@@ -59,8 +59,8 @@ sub try_once {
 		$richXML .= $poorXML;
 		$richXML.= "\n<size>$size</size>\n<seeders>$seeders</seeders>\n<leechers>$leechers</leechers>\n";
 		
-		#This stopped working
-		#My ($up, $down) = $page =~ /<dd id="rating" class="">\s*\+(\d+) \/ -(\d+)/;
+		#this stopped working
+		#my ($up, $down) = $page =~ /<dd id="rating" class="">\s*\+(\d+) \/ -(\d+)/;
 		#$richXML.= "<quality><up>$up</up><down>$down</down></quality>\n";
 		
 		
@@ -74,16 +74,16 @@ sub try_once {
 		
 		$richXML.="<comments>\n";
 		
-		#Really hacky stuff with pages
+		#really hacky stuff with pages
 		my ($compages) = $page =~ /<strong>(\d*)<\/strong>/;
 		if (!$compages) {$compages = 1}
 		
 		for my $compagenu (1..$compages) {
-			my $comurl = 'https://thepiratebay.sx/ajax_details_comments.php?id='.$i.'&page='.$compagenu.'&pages=2000';
+			my $comurl = 'http://thepiratebay.se/ajax_details_comments.php?id='.$i.'&page='.$compagenu.'&pages=2000';
 			my $comhtml = "";
-			#Say "curl -s '$comurl' -m 120";
+			#say "curl -s '$comurl' -m 120";
 			
-			$comhtml = `curl -s --sslv3 '$comurl' -m 120` 
+			$comhtml = `curl -s '$comurl' -m 120` 
 		        while ($comhtml !~ /<div/);
 			
 			
@@ -114,7 +114,7 @@ while (1) {
     $i++;
     #$pm->start and next;
 	my $done = 0;
-	#Will try each 3 times
+	#will try each 3 times
 	my $tries = 0;
 	while (!$done){
 	
@@ -134,4 +134,3 @@ while (1) {
 		}
 	}
 }
-
