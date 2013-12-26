@@ -30,7 +30,7 @@ sub try_once {
 
     say "pred curl";
 
-    $page = `curl -s --sslv3 https://thepiratebay.pe/torrent/$i -m 120` 
+    $page = `curl -s --sslv3 https://thepiratebay.se/torrent/$i -m 120` 
         while ($page !~ /<!DOCTYPE html/);
 
     say "po curl";
@@ -79,7 +79,7 @@ sub try_once {
 		if (!$compages) {$compages = 1}
 		
 		for my $compagenu (1..$compages) {
-			my $comurl = 'https://thepiratebay.pe/ajax_details_comments.php?id='.$i.'&page='.$compagenu.'&pages=2000';
+			my $comurl = 'https://thepiratebay.se/ajax_details_comments.php?id='.$i.'&page='.$compagenu.'&pages=2000';
 			my $comhtml = "";
 			#Say "curl -s '$comurl' -m 120";
 			
