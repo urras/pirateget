@@ -20,7 +20,7 @@ Unfortunately, Pirate Bay admins always started blocking my computers (I guess t
 
 Also, ThePirateBay had some downtimes during the download. I tried to "catch" them, but I still lost about 100-300 torrents. I am too lazy to sort them out now. Sorry.
 
-Anyway, you can run this script with:
+Anyway, you can run this script (requires cURL) with:
 
     perl piratebay.pl
 
