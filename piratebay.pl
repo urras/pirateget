@@ -28,12 +28,12 @@ sub try_once {
 	my $i = shift;
 	my $page="";
 
-    say "pred curl";
+    say "Before curl";
 
     $page = `curl -s http://thepiratebay.se/torrent/$i -m 120` 
         while ($page !~ /<!DOCTYPE html/);
 
-    say "po curl";
+    say "After curl";
     my $line = "";
     if ($page =~ m{<title>Not Found}) {
         return undef;
@@ -127,7 +127,7 @@ while (1) {
 			$done=1;
 		} else {
 			$tries++;
-			say "$i fail nu $tries";
+			say "$i fail number $tries";
 			if ($tries>($tries_if_wrong-1) or (!$broke)) {
 				$done=1;
 			}
