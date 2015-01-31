@@ -15,7 +15,7 @@ system '(
                             
 #Those are hosted on runn1ng's Github page
 '    
-<!DOCTYPE archive PUBLIC "piratebay'.$richpoor.'" "http://fr0stycl34r.github.io/pirateget/'.$richpoor.'.dtd">
+<!DOCTYPE archive PUBLIC "piratebay'.$richpoor.'" "http://urras.github.io/pirateget/'.$richpoor.'.dtd">
 <archive>\'; 
 cat '.$from.'; 
 echo "</archive>" ) | 
